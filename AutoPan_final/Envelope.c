@@ -44,6 +44,9 @@ float getCurrentAmp(Envelope *envelope){
   // If the frame is on or over next point, increment the curIndex
   if(envelope->curFrame >= envelope->points[envelope->curIndex + 1].x){
     envelope->curIndex++;
+    if(envelope->curIndex == 2){
+      envelope->sustain = true;
+    }
   }
 
   a = envelope->points[envelope->curIndex];
@@ -55,6 +58,7 @@ float getCurrentAmp(Envelope *envelope){
   y = (m * envelope->curFrame - m * a.x) + a.y;
 
   //Increment frame
+  if(envelope->sustain != true)
   envelope->curFrame++;
 
   //printf("%d %f %f %f %f\n", envelope->curFrame, a.x, a.y, b.x, b.y);

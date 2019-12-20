@@ -11,6 +11,20 @@ void createWavetable(Wavetable *wavetable){
     }
   }
 }
+//=========================================Sine Wave for reference=====================================================
+
+//Compute sine wave (interleave channels)
+
+  // for (int n = 0; n < kNumFrames; n++){
+  //   double sample = amplitude * sin(2.0 * M_PI * frequency * n / kSampleRate);
+  //   for(int c = 0; c < kNumChannels; c++){
+  //     buffer[kNumChannels * n + c] = sample;
+  //   }
+  // }
+  
+  // Write out the result
+  // sf_count_t count = sf_write_double(sndFile, buffer, sfInfo.channels * kNumFrames);
+
 
 void initWavetable(Wavetable *wavetable){
   wavetable->table = (float *) calloc(kTableSize, sizeof(float));

@@ -10,6 +10,7 @@ typedef struct Point {
 
 typedef struct Envelope {
   bool gate;
+  bool sustain;
   Point points[kNumPoints];
   int curIndex;
   int curFrame;

@@ -5,7 +5,7 @@ CFLAGS=
 # The main executable name
 TARGET=main
 # Dependencies
-DEPENDENCIES= Audio.c MIDI.c Wavetable.c Envelope.c MonoSynth.c
+DEPENDENCIES= Audio.c MIDI.c Wavetable.c Envelope.c MonoSynth.c autopanpan.c
 # Libraries to inlcude
 LIBS=-lportaudio -lportmidi
 # Remove command

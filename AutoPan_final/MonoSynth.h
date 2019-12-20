@@ -3,6 +3,7 @@
 #include "MIDI.h"
 #include "Wavetable.h"
 #include "Envelope.h"
+#include "autopanpan.h"
 
 #define kNoteDuration 1
 
@@ -11,6 +12,8 @@ typedef struct Synth {
   Envelope *envelope;
   MIDIStream *midiStream;
   MIDIEvent midiEvent;
+  AutoParams *autoparams;
+  //include autopan struct
 } Synth;
 
 // Function Prototypes
